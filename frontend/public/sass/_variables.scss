@@ -1,0 +1,23 @@
+$primaryColor: #26adfb;
+$textColor: #333333;
+$lightGray: #efefef;
+
+$borderRadius: 8px;
+$btnHeight: 3.2rem;
+$navMobileHeight: 3.5rem;
+
+$breakpointDesktop: 1000px;
+
+@mixin btn {
+	border-radius: $borderRadius;
+	font-weight: bold;
+	height: $btnHeight;
+	padding: 0 1.5rem;
+	text-align: center;
+	border: none;
+	font-size: 1.15rem;
+
+	@media only screen and (min-width: 1000px) {
+		height: $btnHeight - 0.5rem;
+	}
+}

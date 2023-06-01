@@ -1,0 +1,130 @@
+.admin-page-container {
+	width: 100%;
+	top: 0;
+	min-height: 100vh;
+	background: white;
+	padding-top: 5rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-stats-title {
+	font-size: 1.8em;
+	margin: 0 0 1.5rem;
+}
+
+.general-stats-container {
+	margin-bottom: 4.5rem;
+
+	.admin-stats-title {
+		margin-bottom: 2rem;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		width: 70%;
+		margin: 0 auto;
+
+		.general-stats-label {
+			color: #636363;
+			margin: 0 0 0.6rem;
+			font-size: 0.9em;
+		}
+
+		.general-stats-count {
+			font-size: 1.6em;
+			font-weight: 600;
+			margin: 0;
+		}
+	}
+}
+
+.recent-sales-container {
+	margin: 0 auto 2rem;
+	width: 90%;
+}
+
+.bestsellers-chart-container {
+	order: 2;
+}
+
+.admin-right-panel {
+	order: 1;
+}
+
+.become-admin-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: white;
+	box-sizing: border-box;
+	padding-top: 40vh;
+
+	p {
+		font-size: 1.1rem;
+		width: 30rem;
+		max-width: 80vw;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.admin-page-container {
+		flex-direction: row;
+		height: 100vh;
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 10%;
+		justify-content: space-between;
+		padding-top: 7rem;
+	}
+
+	.bestsellers-chart-container {
+		order: 1;
+		flex-basis: 40%;
+		margin-bottom: 0;
+		height: 95%;
+
+		h1 {
+			margin: 0;
+			height: 10%;
+		}
+	}
+
+	.admin-right-panel {
+		order: 2;
+		flex-basis: 55%;
+		height: 95%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.general-stats-container {
+		height: 33%;
+		margin-bottom: 0;
+
+		ul {
+			justify-content: center;
+
+			li {
+				margin: 0 3rem;
+			}
+		}
+	}
+
+	.recent-sales-container {
+		margin-bottom: 0.5rem;
+		height: 66%;
+
+		.admin-stats-title {
+			height: 10%;
+			margin: 0;
+		}
+	}
+}

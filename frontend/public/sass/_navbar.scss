@@ -1,0 +1,190 @@
+@import './_variables.scss';
+
+nav {
+	height: $navMobileHeight;
+	background: linear-gradient(90deg, $primaryColor 0%, #6626fb 100%);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	box-sizing: border-box;
+
+	padding: 0 5%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-logo {
+	font-family: 'Days One', sans-serif;
+	color: white;
+	text-decoration: none;
+}
+
+.menu-button {
+	background: none;
+	width: $navMobileHeight;
+	height: $navMobileHeight;
+	border: none;
+
+	img {
+		width: 100%;
+	}
+}
+
+.nav-mobile-panel-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+
+	background: rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+}
+
+.cart-item-count {
+	position: absolute;
+	top: 1.3rem;
+	right: 0.9rem;
+
+	background: #fd5e5e;
+
+	border-radius: 1000px;
+	width: 1.4rem;
+	height: 1.4rem;
+
+	p {
+		color: white;
+		margin: 0.1rem 0 0;
+	}
+}
+
+.nav-mobile-panel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	background: $primaryColor;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+
+	animation: slideFromSide 0.5s normal;
+
+	&::after {
+		content: '';
+		width: 3rem;
+		height: 3rem;
+	}
+
+	.close-nav-panel {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	ul {
+		width: 6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		li {
+			position: relative;
+			padding: 2rem 0;
+			width: 100%;
+
+			img {
+				width: 3rem;
+			}
+		}
+	}
+}
+
+@keyframes slideFromSide {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	nav {
+		height: 4rem;
+		// box-shadow: none;
+
+		span {
+			height: 100%;
+
+			ul {
+				margin-top: 0;
+				display: flex !important;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+
+				li {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					padding: 0 2.5rem;
+					font-size: 1.3rem;
+					height: 100%;
+
+					position: relative;
+					color: white;
+					cursor: pointer;
+
+					p {
+						color: white;
+					}
+
+					a {
+						text-decoration: none;
+						width: 100%;
+						padding: 0 2.5rem;
+						margin: 0 -2.5rem;
+					}
+
+					&:hover {
+						box-shadow: inset 0 -4px 0 0 white;
+					}
+
+					img {
+						width: 2.2rem;
+					}
+
+					.cart-item-count {
+						top: 0.5rem;
+						right: 1.7rem;
+
+						p {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.cart-item-count {
+		p {
+			font-size: 1.15rem;
+		}
+	}
+}

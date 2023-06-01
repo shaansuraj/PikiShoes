@@ -1,0 +1,147 @@
+$mobileWidth: 18rem;
+
+.amazoon-logo {
+	margin-bottom: 0.8rem;
+	font-size: 0.9rem;
+	color: #464646;
+	font-family: 'Days One', sans-serif;
+}
+
+.login-page-container {
+	background: white;
+	min-height: 100vh;
+	width: 100vw;
+	box-sizing: border-box;
+
+	padding: 1rem 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		font-size: 1.8rem;
+		margin: 0 auto 6rem;
+	}
+
+	.input-container {
+		width: $mobileWidth;
+		margin-bottom: 1.8rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.sign-in-buttons {
+	display: flex;
+	width: $mobileWidth;
+	justify-content: space-between;
+	align-items: center;
+	margin: 3rem auto 3rem;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.login-seperation {
+	position: relative;
+	width: $mobileWidth;
+	margin: 5rem auto;
+
+	span {
+		background: white;
+		z-index: 10;
+		position: relative;
+		padding: 0 0.5rem;
+		color: #6d6d6d;
+	}
+
+	&::before {
+		content: '';
+		height: 1px;
+		width: 100%;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		right: 0;
+		bottom: 0;
+
+		background: #6d6d6d;
+	}
+}
+
+.google {
+	background: white;
+	border: none;
+	border-radius: 100rem;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+	padding: 0.8rem;
+	margin: 0 auto 2rem;
+
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+
+	img {
+		width: 1.6rem;
+	}
+
+	span {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin: 0 1rem;
+		color: #696969;
+	}
+
+	&:hover {
+		background: #f8f8f8;
+	}
+
+	&:active {
+		background: white;
+	}
+}
+
+.login-error {
+	color: #f00101;
+}
+
+@media only screen and (min-width: $breakpointDesktop) {
+	.login-background {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+
+		z-index: -10;
+	}
+
+	.image-tint {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+
+		z-index: -5;
+
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	}
+
+	.login-page-container {
+		width: 28rem;
+		height: 100vh;
+		overflow-y: auto;
+	}
+}
