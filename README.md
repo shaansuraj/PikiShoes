@@ -1,4 +1,4 @@
-# Dope Kicks (Ecommerce MERN App)
+# Piki Shoes (Ecommerce MERN App)
 ### <a href="https://dope-kicks.xyz">View Project</a>
 
 
